@@ -18,7 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('Article',\App\Http\Controllers\ArticleController::class);
-
 
 

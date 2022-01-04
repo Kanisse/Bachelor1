@@ -22,10 +22,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
 ->name('home');
 
-Route::get('CatProduit', App\Http\Controllers\CatProduitController::class,'index');
-
-Route::get('CatProduit\{$produit}', App\Http\Controllers\CatProduitController::class,'show')
--> name('catproduct');
+Route::resource('CatProduit', App\Http\Controllers\CatProduitController::class);
 
 
 
