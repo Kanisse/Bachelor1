@@ -27,8 +27,7 @@ class ProduitController extends Controller
     public function index()
     {
        
-        $categorie=Categorie::find(13);
-        $produit=$categorie->produit;
+        $produit=Produit::paginate(3);
     
         return view('CRUD.index', compact('produit'));
     }

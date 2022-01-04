@@ -10,7 +10,7 @@
   
 <h1>Liste des produits par Catégorie</h1>
 
-        <a href="{{ route('catproduct',12) }}"> Afficher la liste par catégorie </a>
+<a href="{{ route('CatProduit.show',12) }}"> Afficher la liste par catégorie </a>
 
 </body>
 </html>

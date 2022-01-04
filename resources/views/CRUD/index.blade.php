@@ -44,7 +44,7 @@
   @endforeach
   </table>
 
-
+{!! $produit->links() !!}
 
 </div>
 </div>
