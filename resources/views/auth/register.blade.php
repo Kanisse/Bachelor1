@@ -76,6 +76,24 @@
                             </div>
 
                             <div class="mb-3 row">
+                                <label for="role" class="col-md-4 col-form-label text-end">
+                                    Role :
+                                </label>
+
+                                <div class="col-md-6">
+                                    <select  type="text"
+                                        class="form-control"
+                                        name="role">
+                                        <option value="">Veuillez choisir le role</option>
+                                        <option value="">Administrateur</option>
+                                        <option value="">Manager</option>
+                                        <option value="">Client</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3 row">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Register') }}

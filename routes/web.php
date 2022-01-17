@@ -18,11 +18,13 @@ Route::get('/', function () {
 
 Route::resource('produit',App\Http\Controllers\ProduitController::class);
 
+Route::get('page', function(){
+    return view ('index1');
+});
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
 ->name('home');
-
-Route::resource('CatProduit', App\Http\Controllers\CatProduitController::class);
 
 
 

@@ -1,14 +1,14 @@
-@extends('layouts.app')
+@extends('structure')
 
 @section('content')
-  <div class="container">
+
+<div style="padding-top: 100px">
   <div class="row">
 
     <div class="col-lg-12">
       
     <a class="btn btn-success" href="{{ route('produit.create') }}"> Ajouter un produit</a>
     
-
   </div>
   </div>
 
@@ -29,7 +29,6 @@
       <td>{{ $value->id }}</td>
       <td>{{ $value->Nom_Produit }}</td>
       <td>{{ $value->Prix_Produit }}</td>
-    
     <td><a class="btn btn-info" href="{{ route('produit.show',$value->id) }}">Afficher</a></td>
       <td><a class="btn btn-warning" href="{{ route('produit.edit',$value->id) }}">Modifier</a></td>
     <td>
@@ -48,4 +47,4 @@
 
 </div>
 </div>
-  @endsection
+@endsection

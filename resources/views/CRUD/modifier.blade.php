@@ -1,4 +1,4 @@
-@extends('Layouts.app')
+@extends('structure')
 
 @section('content')
   
