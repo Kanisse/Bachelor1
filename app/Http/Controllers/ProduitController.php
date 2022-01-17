@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categorie;
+use App\Models\posts;
 use App\Models\Produit;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
 
@@ -71,9 +73,10 @@ class ProduitController extends Controller
     public function show($id)
     {
         $produit=Produit::find($id);
-        $categorie = $produit->categorie->Nom_Cat;    
+        $categorie = $produit->categorie->Nom_Cat; 
+        $posts=$produit->posts;
         return view('CRUD.afficher',
-        compact('produit','categorie'));
+        compact('produit','categorie','posts'));
     }
 
     /**
@@ -120,4 +123,6 @@ class ProduitController extends Controller
         ->route('produit.index')
         ->with('success','Suppression avec succès');
     }
+
+
 }
