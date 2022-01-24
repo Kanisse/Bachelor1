@@ -9,6 +9,9 @@ class Produit extends Model
 {
     use HasFactory;
 
+
+    protected $hidden=["id","created_at","updated_at"];
+
     public function categorie() {     
     return $this->belongsTo(Categorie::class); 
 }
@@ -17,4 +20,11 @@ public function posts(){
     return $this->hasMany(posts::class);
 }
 
+public function factures(){
+    return $this->belongsToMany(Facture::class);
 }
+
+
+}
+
+

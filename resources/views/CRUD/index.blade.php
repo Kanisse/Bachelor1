@@ -1,5 +1,7 @@
 @extends('structure')
 
+@section('title',' La page index')
+
 @section('content')
 
 <div style="padding-top: 100px">

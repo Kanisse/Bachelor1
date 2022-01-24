@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Progressus - Free business bootstrap template by GetTemplate</title>
+	<title>  @yield('title') </title>
 
 	<link rel="shortcut icon" href="{{ asset('images/gt_favicon.png') }}">
 	
@@ -33,12 +33,12 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="#">Acceuil</a></li>
-        <li><a href="about.html">A propos</a></li>
+        <li class="active"><a href="{{ route('produit.index') }}">Acceuil</a></li>
+        <li><a href="#">Commentaires</a></li>
         <li>
           @if (Route::has('login'))
              @auth
-                  <a href="{{ url('/home') }}">Home</a>
+                  <a href="{{ url('/home') }}">Bienvenue {{ Auth::user()->name }}</a>
               @else
                   <a href="{{ route('login') }}">Log in</a>
 
@@ -53,7 +53,6 @@
       </ul>
     </div><!--/.nav-collapse -->
   </div>
-
 
 
 @yield('content')

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('structure')
 
 
 @section('content')
@@ -29,7 +29,8 @@
     <label class="label">Catégorie</label>
         <select name="categorie_id">
             @foreach($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->Nom_Cat }}</option>
+                <option value="{{ $category->id }}">
+                    {{ $category->Nom_Cat }}</option>
             @endforeach
         </select>
 </div>

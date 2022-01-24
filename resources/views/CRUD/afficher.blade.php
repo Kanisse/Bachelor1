@@ -1,5 +1,7 @@
 @extends('structure')
 
+@section('title', 'Détails produits')
+
 @section('content')
 
 
@@ -20,14 +22,27 @@
 
 </table>   
 
-
 <h2>Les commentaires</h2>
 <ul>
-@foreach($posts as $value)
+@foreach($posts as $value1)
 <li class="list-group-item list-group-item-dark">
-      ({{ $value->text}})</li>
+      ({{ $value1->text}}) </li>   
 @endforeach
+
 </ul>
 
 </div>
+
+<h1>Les factures </h1>
+
+<ul>
+      @foreach($factures as $value2)
+      <li class="list-group-item list-group-item-dark">
+            ({{ $value2->Adresse_facture}}) </li>   
+      @endforeach
+      
+      </ul>
+
+
+
 @endsection
