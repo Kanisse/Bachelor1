@@ -18,13 +18,8 @@ Route::get('/', function () {
 
 Route::resource('produit',App\Http\Controllers\ProduitController::class);
 
-Route::get('page', function(){
-    return view ('index1');
-});
+Route::resource('facture',App\Http\Controllers\FactureController::class);
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
 ->name('home');
-
-
-

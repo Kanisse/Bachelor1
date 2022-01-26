@@ -20,29 +20,21 @@
       </td>
 </tr>
 
-</table>   
+</table>  
 
-<h2>Les commentaires</h2>
+
+<h3> Les commentaires</h3>
 <ul>
-@foreach($posts as $value1)
-<li class="list-group-item list-group-item-dark">
-      ({{ $value1->text}}) </li>   
+@foreach($posts as  $value)
+    <li>  {{ $value->text }}</li>
 @endforeach
-
 </ul>
 
-</div>
-
-<h1>Les factures </h1>
-
+<h3> Les factures</h3>
 <ul>
-      @foreach($factures as $value2)
-      <li class="list-group-item list-group-item-dark">
-            ({{ $value2->Adresse_facture}}) </li>   
-      @endforeach
-      
-      </ul>
-
-
+@foreach($factures as  $value)
+    <li>  {{ $value->Adresse_facture }}</li>
+@endforeach
+</ul>
 
 @endsection

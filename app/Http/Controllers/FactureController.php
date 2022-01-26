@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Facture;
+use App\Models\Produit;
 use Illuminate\Http\Request;
 
 class FactureController extends Controller
@@ -13,7 +15,8 @@ class FactureController extends Controller
      */
     public function index()
     {
-        //
+        $facture=Facture::all();
+        return view ('index',compact('facture'));
     }
 
     /**

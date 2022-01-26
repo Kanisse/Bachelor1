@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Produit;
-use PhpParser\JsonDecoder;
+use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProduitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,19 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return Produit::all();
-       
+        $produit=Produit::paginate(3);
+        return view('CRUD.index',compact('produit'));
+
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -37,6 +47,24 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+    {
+        $produit =Produit::find($id);
+        $categorie=$produit->categorie->Nom_Cat;
+        $posts=$produit->posts;
+        $factures=$produit->factures;
+        
+return view('CRUD.afficher',
+compact('produit','categorie','posts','factures'));
+
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
         //
     }

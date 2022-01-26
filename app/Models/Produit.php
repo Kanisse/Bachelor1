@@ -9,7 +9,7 @@ class Produit extends Model
 {
     use HasFactory;
 
-
+   
     protected $hidden=["id","created_at","updated_at"];
 
     public function categorie() {     

@@ -7,7 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
    <a class="nav-item nav-link" href="{{ route ('produit.index') }}">Produits</a>
-       </div>
+   <a class="nav-item nav-link" href="{{ route ('facture.index') }}">Factures</a>     
+  </div>
     </div>
   </nav>
 </div>
