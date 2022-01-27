@@ -13,10 +13,13 @@ class FactureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $facture=Facture::all();
-        return view ('index',compact('facture'));
+    public function index() {
+
+
+        $factures = Facture::all();
+       return view ('index', compact('factures')) ;
+       
+        
     }
 
     /**

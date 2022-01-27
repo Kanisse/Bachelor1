@@ -21,9 +21,8 @@ public function posts(){
 }
 
 public function factures(){
-    return $this->belongsToMany(Facture::class);
+    $this->belongsToMany(Facture::class);
 }
-
 
 }
 
